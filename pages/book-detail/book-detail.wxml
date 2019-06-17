@@ -1,0 +1,82 @@
+
+<wxs src='../../util/filter.wxs' module='util'/>
+
+<view class='container'>
+  <view class='header'>
+    <image class='image' src='{{bookInfo.image}}'></image>
+    <text class='title'>{{bookInfo.title}}</text>
+    <text class='author'>{{bookInfo.author}}</text>
+  </view>
+  <view class='comments-container'>
+    <text class='comments-title'>短评</text>
+    <view class='comments-container-sub'>
+        <block wx:for='{{util.limit(comments,10)}}' wx:key="content">
+          <tag-cmp tag-class="{{tool.highlight(index)}}" text="{{item.content}}" class='comments-container-sub tag-cmp'>
+            <text class='num' slot='after'>{{'+'+item.nums}}</text>
+          </tag-cmp>
+        </block>
+    </view>
+  </view>
+  <view class='content-introduce'>  
+    <text class='content-introduce-title'>内容简介</text>
+    <text decode='{{true}}' class='content-introduce-content'>{{util.format(bookInfo.summary)}}</text>
+  </view>
+  <view class='book-info'>
+    <text class='book-info-title'>书本信息</text>
+    <view class='book-info-container'>
+      <view class='book-info-container-view description'>
+        <text class='text'>出版社</text>
+        <text class='text'>出版年</text>
+        <text class='text'>页数</text>
+        <text class='text'>定价</text>
+        <text class='text'>装帧</text>
+      </view>
+      <view class='book-info-container-view'>
+        <text>{{bookInfo.publisher}}</text>
+        <text>{{bookInfo.pubdate}}</text>
+        <text>{{bookInfo.pages}}</text>
+        <text>{{bookInfo.price}}</text>
+        <text>{{bookInfo.price}}</text>
+    </view>
+    </view>
+  </view>
+</view>
+<view class='post-container' wx:if='{{!posting}}'>
+  <view bind:tap="onFakePost" class='post-fake'>
+    <text>输入点评</text>
+  </view>
+  <like-cmp bind:like="onLike" class='like' count='{{likeCount}}' like='{{likeStatus}}'/>
+</view>
+
+<view class='posting-container' wx:if="{{posting}}">
+  <view class='posting-header'>
+    <text>仅可点击标签+1</text>
+    <text bind:tap='onCancel' class='cancel'>取消</text>
+  </view>
+  <view class='posting-comments-container'>
+    <block wx:for='{{util.limit(comments,3)}}' wx:key="content">
+      <tag-cmp bind:tapping="onPost" class='tag-cmp' tag-class="{{tool.highlight(index)}}" text='{{item.content}}'>
+        <text slot='after'>{{'+'+item.nums}}</text>
+      </tag-cmp>
+    </block>
+  </view>
+  <input bindconfirm='onPost' class='post' placeholder='短评最多12个字'></input>
+</view>
+<mask-cmp wx:if='{{posting}}'/>
+<wxs module='tool'>
+  var highlight = function(index){
+    if(index == 0) {
+      return 'ex-tag1'
+    }
+    else if (index == 1) {
+      return 'ex-tag2'
+    }
+    else {
+      return ''
+    }
+  }
+
+  module.exports = {
+    highlight:highlight
+  }
+</wxs>

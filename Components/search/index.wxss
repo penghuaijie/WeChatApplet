@@ -1,0 +1,141 @@
+/* Components/search/index.wxss */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 100rpx;
+  border-top: 1px solid #f5f5f5;
+  border-bottom: 1px solid #f5f5f5;
+  position: fixed;
+  z-index: 99;
+  background-color:white;
+}
+
+.search-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #f5f5f5;
+  border-radius: 50px;
+  margin-left: 20rpx;
+}
+
+.searchImage {
+    width: 28rpx;
+    height: 28rpx;
+    margin-left: 24rpx;
+    margin-right: 16rpx;
+}
+
+.input {
+  height: 68rpx;
+  width: 500rpx;
+  font-size: 24rpx;
+}
+
+.cancelImage {
+    width: 28rpx;
+    height: 28rpx;
+    margin-right: 20rpx;
+}
+
+.cancel {
+  font-size: 24rpx;
+  line-height: 68rpx;
+  width: 120rpx;
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  background-color: white;
+}
+
+.history {
+  display: flex;
+  flex-direction: row;
+  margin-left: 20rpx;
+  margin-top: 160rpx;
+}
+
+.blackView{
+  width: 10rpx;
+  height: 30rpx;
+  background-color: black;
+}
+
+.searchTitle {
+  line-height: 30rpx;
+  font-size: 28rpx;
+  color: purple;
+  margin-left: 20rpx;
+}
+
+.hotSearch {
+  display: flex;
+  flex-direction: row;
+  margin-left: 20rpx;
+  margin-top: 70rpx;
+}
+
+.hotSearchContainer {
+  display: flex;
+  flex-direction: row;
+  margin-left: 20rpx;
+  width: 710rpx;
+  background-color: white;
+  margin-top: 20rpx;
+  flex-wrap: wrap;
+}
+
+.searchBlock {
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+  background-color: white;
+  flex-wrap: wrap;
+}
+
+.tag-cmp {
+  margin-right: 10rpx;
+  display: flex;
+  flex-direction: row;
+  margin-top: 10rpx;
+}
+
+.searchResultContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+  margin-top: 60rpx;
+}
+
+.searchResultBookContainer {
+  display: flex;
+  flex-direction: row; 
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: white;
+  padding: 0rpx 90rpx 0rpx 90rpx;
+  margin-top: 100rpx;
+  justify-content: space-around;
+}
+
+.book-cmp {
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+}

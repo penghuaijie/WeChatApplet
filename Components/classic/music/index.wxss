@@ -1,0 +1,54 @@
+/* Components/music/index.wxss */
+.container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image {
+  width: 422rpx;
+  height: 422rpx;
+  margin-top: 60rpx;
+  border-radius: 50%;
+}
+
+.pauseOrPlaying {
+  width: 120rpx;
+  height: 120rpx;
+  position: relative;
+  bottom: 270rpx;
+}
+
+.music {
+  width: 44rpx;
+  height: 127rpx;
+  position: relative;
+  right: 310rpx;
+  bottom: 58rpx;
+}
+
+.content {
+  font-size: 36rpx;
+  max-width: 550rpx;
+  position: relative;
+  bottom: 50rpx;
+}
+
+ .rotation {
+    -webkit-transform: rotate(360deg);
+    animation: rotation 12s linear infinite;
+    -moz-animation: rotation 12s linear infinite;
+    -webkit-animation: rotation 12s linear infinite;
+    -o-animation: rotation 12s linear infinite;
+  }
+  
+  @-webkit-keyframes rotation {
+    from {
+      -webkit-transform: rotate(0deg);
+    }
+  
+    to {
+      -webkit-transform: rotate(360deg);
+    }
+  }

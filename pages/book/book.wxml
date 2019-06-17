@@ -1,0 +1,24 @@
+<!--pages/book/book.wxml-->
+
+<view wx:if='{{!searching}}' class='container'>
+  <view class='header'>
+    <view bind:tap='onSearch' class='search'>
+      <image class='serach-img' src='{{searchSrc}}'></image>
+      <text>搜索书籍</text>
+    </view>
+  </view>
+
+  <view class='sub-container'>
+    <image class='quality-img' src='{{quality}}'>
+    </image>
+    <view class='book-container'>
+      <block wx:key='id' wx:for='{{books}}'>
+        <c-book book='{{item}}'/>
+      </block>
+    </view>
+  </view>
+</view>
+
+<search-cmp bind:cancel='onCancelSearch' wx:if='{{searching}}'/>
+
+

@@ -1,0 +1,246 @@
+/* pages/book-detail/book-detail.wxss */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: #f5f5f5;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  width: 100%;
+  margin-bottom: 40rpx;
+}
+
+.image {
+  margin-top: 40rpx;
+  width: 200rpx;
+  height: 300rpx;
+  box-shadow: 2px 2px 3px #e3e3e3;
+}
+
+.title {
+  color: #2f2f2f;
+  margin-top: 20rpx;
+  font-size: 38rpx;
+  font-weight: 600;
+}
+
+.author {
+  font-size: 28rpx;
+  color: #999;
+  margin-bottom: 40rpx;
+}
+
+.comments-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  width: 690rpx;
+  padding: 30rpx;
+  margin-bottom: 40rpx;
+}
+
+.comments-title {
+  margin-top: 20rpx;
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #2f2f2f;
+  margin-bottom: 20rpx;
+}
+
+.comments-container-sub {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.comments-container-sub tag-cmp {
+  margin-right: 15rpx;
+  margin-bottom: 10rpx;
+}
+
+.num {
+  margin-left: 10rpx;
+  font-size: 22rpx;
+  color: #aaa;
+}
+
+/* .comments-container-sub > tag-cmp:nth-child(1) > view {
+  background-color: #fffbdd;
+}
+
+
+.comments-container-sub > tag-cmp:nth-child(2) > view {
+  background-color: #eefbdd;
+} */
+
+.ex-tag1 {
+  background-color: #fffbdd !important;
+}
+
+.ex-tag2 {
+  background-color: #eefbdd !important;
+}
+
+.content-introduce {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30rpx;
+  background-color: white;
+  width: 690rpx;
+  margin-bottom: 40rpx;
+}
+
+.content-introduce-title {
+  margin-top: 20rpx;
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #2f2f2f;
+  margin-bottom: 20rpx;
+}
+
+.content-introduce-content {
+  text-indent: 58rpx;
+  font-weight: 500;
+}
+
+
+.book-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30rpx;
+  background-color: white;
+  width: 690rpx;
+  /* margin-bottom: 40rpx; */
+}
+
+.book-info-title {
+  margin-top: 20rpx;
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #2f2f2f;
+  margin-bottom: 20rpx;
+}
+
+.book-info-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  font-size: 28rpx;
+  margin-bottom: 100rpx;
+}
+
+.book-info-container-view {
+  display: flex;
+  flex-direction: column;
+}
+
+.description {
+  margin-right: 30rpx;
+  color: #999;
+}
+
+.post-container {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 690rpx;
+  height: 100rpx;
+  background-color: white;
+  padding: 0 30rpx;
+  bottom: 0;
+  box-shadow: 1px -1px 1px #e3e3e3;
+}
+
+.post-fake {
+  display: flex;
+  flex-direction: row;
+  width: 460rpx;
+  height: 60rpx;
+  border-radius: 35rpx;
+  border-color: black;
+  border: 1px solid #999;
+  padding-left: 30rpx;
+  align-items: center;
+  font-size: 22rpx;
+}
+
+.like {
+  margin-left: 30rpx;
+}
+
+.posting-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  z-index: 999;
+}
+
+.posting-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: white;
+  width: 690rpx;
+  height: 100rpx;
+  justify-content: space-between;
+  border-bottom: 1px solid #f5f5f5;
+  border-top: 1px solid #f5f5f5;
+  padding: 0 30rpx;
+}
+
+.posting-header>text:first-child {
+    font-size: 28rpx;
+    color: #bbb;
+}
+
+.cancel {
+  color: #666;
+}
+
+.posting-comments-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 40rpx 30rpx 0;
+  width: 690rpx;
+  background-color:white;
+  flex-wrap: wrap;
+}
+
+/* .posting-comments-container>tag-cmp:nth-child(1)>view {
+  background-color: #fffbdd;
+}
+
+.posting-comments-container>tag-cmp:nth-child(2)>view {
+  background-color: #eefbff;
+} */
+
+.tag-cmp {
+  margin-right: 15rpx;
+  margin-bottom: 10rpx;
+}
+
+.post {
+  width: 690rpx;
+    margin: 30rpx auto;
+    height: 56rpx;
+    background-color: #f5f5f5;
+    border-radius: 15px;
+    padding-left: 25rpx;
+}
+
+

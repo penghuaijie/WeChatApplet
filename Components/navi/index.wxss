@@ -1,0 +1,27 @@
+/* Components/navi/index.wxss */
+.container {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 600rpx;
+  height: 80rpx;
+  background-color:#f7f7f7;
+  border-radius: 2px;
+}
+
+.leftImage {
+  /* left: 20rpx; */
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.text {
+  font-size: 30rpx;
+  color: black;
+}
+
+.rightImage {
+  width: 80rpx;
+  height: 80rpx;
+}

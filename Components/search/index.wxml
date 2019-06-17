@@ -1,0 +1,43 @@
+<!--Components/search/index.wxml-->
+<view class='container'>
+  <view class='header'>
+    <view class='search-container'>
+      <image class='searchImage' src='images/search.png'></image>
+      <input class='input' bind:confirm="onConfirm" value='{{inputText}}' auto-focus='{{true}}' placeholder='书籍名'></input>
+      <image class='cancelImage' bind:tap="onClose" src='images/cancel.png'></image>
+    </view>
+    <text bind:tap="onCancel" class='cancel'>取消</text>
+  </view>
+
+  <view class='content' wx:if="{{!results.length}}">
+    <view class='history'>
+      <view class='blackView'></view>
+      <text class='searchTitle'>历史搜索</text>
+    </view>
+    
+    <view class='hotSearchContainer'>
+      <block class='searchBlock' wx:for='{{historys}}' wx:key=''>
+      <tag-cmp bind:tapping="onHistoryTap" class='tag-cmp' text='{{item}}'/>
+      </block>
+    </view>
+
+    <view class='hotSearch'>
+      <view class='blackView'></view>
+      <text class='searchTitle'>热门搜索</text>
+    </view>
+
+    <view class='hotSearchContainer'>
+      <block class='searchBlock' wx:for='{{hots}}' wx:key=''>
+      <tag-cmp bind:tapping="onHotTap" class='tag-cmp' text='{{item}}'/>
+      </block>
+    </view>
+  </view>
+
+  <view class='searchResultContainer' wx:if="{{results.length}}">
+    <view class='searchResultBookContainer'>
+        <block wx:for='{{results}}'>
+          <book-cmp class='book-cmp' book='{{item}}'/>
+        </block>
+    </view>
+  </view>
+</view>
